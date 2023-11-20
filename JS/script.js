@@ -30,17 +30,32 @@ console.log(price);
 
 // Calcolo per minoremmi o over 65:
 
-let sconto = 0;
+let discount = 0;
 
 if (age < 18) {
-  sconto = (price * 20) / 100;
+  discount = (price * 20) / 100;
+
+  console.log(discount);
 } else if (age > 65) {
-  sconto = (price * 40) / 100;
+  discount = (price * 40) / 100;
+
+  console.log(discount);
 }
-price = price - sconto;
+let discounted_price = price - discount;
+
+console.log(price);
 
 // Stampare in pagina
 
 const prezzo = document.getElementById("prezzo");
 
-prezzo.innerHTML = `il costo del biglietto è: ${price}`;
+prezzo.innerHTML = `il costo del biglietto è: ${discounted_price}`;
+
+// fissare numero decimale
+
+let num = discounted_price;
+let n = num.toFixed(2);
+
+document.getElementById(
+  "prezzo"
+).innerHTML = `il costo del biglietto è: ${discounted_price}`;
