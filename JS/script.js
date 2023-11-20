@@ -30,15 +30,14 @@ console.log(price);
 
 // Calcolo per minoremmi o over 65:
 
+let sconto = 0;
+
 if (age < 18) {
-  const minor = (price * 20) / 100;
-
-  console.log(minor);
+  sconto = (price * 20) / 100;
 } else if (age > 65) {
-  const over = (price * 40) / 100;
-
-  console.log(over);
+  sconto = (price * 40) / 100;
 }
+price = price - sconto;
 
 // Stampare in pagina
 
