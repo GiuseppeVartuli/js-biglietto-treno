@@ -41,3 +41,7 @@ if (age < 18) {
 }
 
 // Stampare in pagina
+
+const prezzo = document.getElementById("prezzo");
+
+prezzo.innerHTML = `il costo del biglietto è: ${price}`;
